@@ -26,21 +26,15 @@ spec:
             - name: HOST
               value: ""
             - name: LOAD_TYPE
-              value: "load" 
+              value: "post" 
             - name: SPAWN_RATE
               value: "1"
             - name: RESPONSE_TYPE
               value: "token"
             - name: CLIENT_ID  
-              valueFrom:
-                secretKeyRef:
-                  name: load.credentials
-                  key: client_id
+              value: ""
             - name: CLIENT_SECRET
-              valueFrom:
-                secretKeyRef:
-                  name: load.credentials
-                  key: client_secret
+              value: ""
             - name: CM_FILE
               value: "/tmp/demo/config.py"
             - name: GRANT_TYPE
@@ -50,6 +44,6 @@ spec:
             - name: REPLICA
               value: "1"
             - name: LOAD_IMAGE 
-              value: ""
+              value: "kaleoum/kgh-load:test-tools"
         probe: []
   annotationCheck: "false"

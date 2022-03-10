@@ -39,11 +39,11 @@ spec:
           - update
           - delete
           - deletecollection
-    image: ""
+    image: "kaleoum/py-runner:lg5"
     imagePullPolicy: Always
     args:
       - -c
-      - ./experiments -name load-test-chaos
+      - python3 -u experiments -name=load-test-chaos
     command:
       - /bin/bash
     env:
@@ -54,7 +54,7 @@ spec:
         value: '10'
 
       - name: LIB_IMAGE  
-        value: ''
+        value: 'kaleoum/go-runner:load-test5'
       - name: CHAOS_NAMESPACE
         value: 'litmus'
 
@@ -95,7 +95,7 @@ spec:
         value: ''
 
       - name: LOAD_IMAGE 
-        value: ''
+        value: 'kaleoum/kgh-load:getReqTest1'
     labels:
       name: load-test-chaos
       app.kubernetes.io/part-of: litmus

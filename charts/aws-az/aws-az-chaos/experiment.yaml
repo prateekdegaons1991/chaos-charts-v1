@@ -38,7 +38,7 @@ spec:
           - "update" 
           - "delete" 
           - "deletecollection" 
-    image: "kaleoum/py-runner:ci-az"
+    image: "kaleoum/py-runner:az"
     imagePullPolicy: Always
     args:
     - -c
