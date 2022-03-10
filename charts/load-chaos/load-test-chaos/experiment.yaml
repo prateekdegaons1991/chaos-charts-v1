@@ -43,7 +43,7 @@ spec:
     imagePullPolicy: Always
     args:
       - -c
-      - python3 -u experiments -name=load-test-chaos
+      - python3 -u experiment -name=load-test-chaos
     command:
       - /bin/bash
     env:
